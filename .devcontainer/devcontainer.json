@@ -1,5 +1,6 @@
 {
 	"name": " Codespace",
+	"image": "mcr.microsoft.com/vscode/devcontainers/dotnet:0.201.9-3.1",
 	"settings": {
 		"workbench.colorTheme": "Default Dark+",
 		"terminal.integrated.defaultProfile.linux": "pwsh"
@@ -21,10 +22,7 @@
 		"ms-vscode.powershell",
 		"jmrog.vscode-nuget-package-manager"
 	],
-	"postCreateCommand": "",
-	"build": {
-		"dockerfile": "Dockerfile"
-	}
+	"postCreateCommand": ""
 }
 
 // Built with ❤ by [Pipeline Foundation](https://pipeline.foundation)
