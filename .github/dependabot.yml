@@ -1,4 +1,10 @@
 version: 2
+registries:
+  securitytools:
+    type: nuget-feed
+    url: https://securitytools.pkgs.visualstudio.com/_packaging/Guardian/nuget/v3/index.json
+    token: ${{ secrets.NUGET_PRIVATE_REG_TOKEN }}
+
 updates:
   - package-ecosystem: 'nuget'
     directory: 'eng/common/internal'
@@ -13,6 +19,8 @@ updates:
 
   - package-ecosystem: 'nuget'
     directory: 'eng/common/sdl'
+    registries:
+      - securitytools
     open-pull-requests-limit: 10
     schedule:
       interval: 'daily'
