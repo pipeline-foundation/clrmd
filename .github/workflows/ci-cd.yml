@@ -9,7 +9,7 @@ jobs:
     env:
       pathToSolution: Microsoft.Diagnostics.Runtime.sln
       testResultsFolderName: Test results
-      publishOutputFolderName: Publish outputs 
+      publishOutputFolderName: Publish output
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -46,6 +46,7 @@ jobs:
           --no-restore
 
       - name: Run unit tests
+        continue-on-error: true
         shell: pwsh
         run: |
           $pathToSolution = "${{ env.pathToSolution }}"
