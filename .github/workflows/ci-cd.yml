@@ -67,6 +67,7 @@ jobs:
       # Artifact generation
 
       - name: Publish project for each target framework
+        continue-on-error: true
         shell: pwsh
         run: |
           $pathToSolution = "${{ env.pathToSolution }}"
