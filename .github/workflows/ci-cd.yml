@@ -19,6 +19,11 @@ jobs:
       - name: Install .NET SDK
         uses: actions/setup-dotnet@v1
         with:
+          dotnet-version: 3.1.411
+
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v1
+        with:
           dotnet-version: 5.0.302
 
       # Build and test validation
@@ -80,7 +85,7 @@ jobs:
             --no-restore
           }
 
-      # Artifact publish
+      # Artifact publish to pipeline
 
       - name: Upload test results as pipeline artifact
         uses: actions/upload-artifact@v2
