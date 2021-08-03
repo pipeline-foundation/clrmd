@@ -80,7 +80,7 @@ jobs:
           foreach ( $framework in $targetFrameworks ) {
             $frameworkNum = [String]($framework -replace ' ', '')
 
-            dotnet publish $pathToSolution `
+            dotnet publish $pathToProject `
             --configuration $configurationSetting `
             --output "$publishOutputFolder/$frameworkNum" `
             --framework $frameworkNum `
